@@ -1,6 +1,6 @@
 from Calories import Calories
 
-
+#takes inputs and checks the types and ranges are correct
 while True:
     try:
         days = int(input("Enter amount of Days 1-7: "))

@@ -16,15 +16,15 @@ class Calories:
     def TotalIntake(self):
         return self.intake * self.days
 
-    def WeightChange(self):
-        amount = (self.TotalIntake() - self.TotalBurnedKcal()) / 3500
+    def WeightChange(self): #Gets the calories surplus or deficit
+        amount = (self.TotalIntake() - self.TotalBurnedKcal()) / 3500   #converts the calories to pounds becuase 1lb = 3500kcal
         if self.unit == "lb":
             return amount
-        elif self.unit == "kg":
+        elif self.unit == "kg":     #converts lb to kg if kg was the selected unit. 1kg = ~2.2lb
             return amount / 2.20462
 
     def Bodyfat(self):
-        return (self.WeightChange() / self.weight) * 100
+        return (self.WeightChange() / self.weight) * 100    #Sets bodyfat percentage changed
 
     def LoseGain(self):
         if self.WeightChange() > 0:
