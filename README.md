@@ -7,7 +7,8 @@ This application allows the user to input their average Resting and Active Calor
 
 
 ###### No external dependencies
-
+py weightcalc.py in terminal to run main.
+py -m unittest test.py to run unittest
 
 
 ##### How it works
